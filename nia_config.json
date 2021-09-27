@@ -1,0 +1,8 @@
+{
+	"base_url" : "http://images-api.nasa.gov/search?media_type=image&",
+	"page_json_dir" : "/path/to/store/search_json/dir/",
+	"img_json_dir" : "/path/to/store/image_json/dir/",
+	"img_dir" : "/path/to/store/images/",
+	"log_dir" : "/path/to/store/logs/",
+	"terms_filepath" : "/path/to/store/search_terms.txt"
+}

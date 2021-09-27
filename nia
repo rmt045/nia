@@ -1,0 +1,20 @@
+#!/bin/bash
+if [[ -z $2 ]]
+then
+	echo "Please supply a search query string and configuration filepath"
+	exit 1
+else
+	echo 'NASA Image API Crawl for search:'
+	echo $1
+	echo 'Configuration file:'
+	echo $2
+	echo 'Running JSON Fetcher '
+	python3 nia_json.py $1 $2
+	echo 'Running Link Fetcher'
+	python3 nia_links.py $1 $2
+	echo 'Running Downloader'
+	python3 nia_downloads.py $1 $2
+	echo 'Gathering Updated Terms'
+	python3 nia_terms.py $2
+	echo 'DONE'
+fi
