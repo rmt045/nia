@@ -1,9 +1,9 @@
 # nia
 
 ## Overview
-nia, or NASA Image Archiver, is an application written to assist in archiving images accessible via the NASA Images API. This project implements the REST API specified by the agency in [their documentation](https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf").
+nia, or NASA Image Archiver, is an application written to assist in archiving images accessible via the NASA Images API. This project implements the REST API specified by the agency in [their documentation](https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf).
 
-##### Table of Contents
+## Table of Contents
 - [Prerequisites](#Prerequisites)
 - [Installation](#Installation)
 - [Configuration](#Configuration)
