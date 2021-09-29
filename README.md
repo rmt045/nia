@@ -1,34 +1,33 @@
-# nia
-
-##### Table of Contents
-[Overview](#Overview)
-[Prerequisites](#Prerequisites)
-[Installation](#Installation)
-[Configuration](#Configuration)
-[Usage](#Usage)
-[Output](#Output)
-[Limitations](#Limitations)
-[Contributing](#Contributing)
-[ToDo](#ToDo)
-[License](#License)
+#nia
 
 <a name="Overview"/>
-## Overview
+##Overview
 NIA, or NASA Image Archiver, is an application written to assist in archiving images accessible via the NASA Images API. This project implements the REST API specified by the agency in <a href="https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf">their documentation</a>.
 
+#####Table of Contents
+- [Prerequisites](#Prerequisites)
+- [Installation](#Installation)
+- [Configuration](#Configuration)
+- [Usage](#Usage)
+- [Output](#Output)
+- [Limitations](#Limitations)
+- [Contributing](#Contributing)
+- [ToDo](#ToDo)
+- [License](#License)
+
 <a name="Prerequisites"/>
-## Prerequisites
+##Prerequisites
 - Bash
 - Python 3.4+
 
 <a name="Installation"/>
-## Installation
+##Installation
 1. Ensure all prerequisites are met
 2. Clone the repository using ```git clone https://github.com/rmt045/nia.git```
 3. Make the ```nia``` Bash script executable via ```chmod +x nia```
 
 <a name="Configuration"/>
-## Configuration
+##Configuration
 NIA uses a JSON configuration file to determine where to save images, where to store log files, where to store discovered search terms, etc. The format for this configuration file can be found in the included example ```nia_config.json``` file in this repository; simply replace the dummy values with directories and filepaths appropriate to your needs. Below is an explanation of what each configuration item does:
 
 - ```base_url```: The URL used to access the NASA Images API and search for images that match the supplied query. For example, if the query is "q=moon", the search URL sent will be ```http://images-api.nasa.gov/search?media_type=image&q=moon```.
@@ -39,19 +38,19 @@ NIA uses a JSON configuration file to determine where to save images, where to s
 - ```terms_filepath```: The full filepath where the discovered search terms are stored. Additional search terms are found as each JSON file in ```page_json_dir``` is scanned. Included in this file is a list of centers, keywords, locations, photographers, secondary creators, and albums which may be used in future queries.
 
 <a name="Usage"/>
-## Usage
+##Usage
 Run the script using ```./nia (query) (configuration file)```. For example, if the query string is "q=moon" and the configuration file is "nia_config.json", use ```./nia q=moon nia_config.json```
 
 <a name="Output"/>
-## Output
+##Output
 While running, the application will output logging information to stdout, which can be redirected to a log file as desired. Note that this behavior will change in a future version (see [ToDo](#ToDo)). Once the application has finished processing the supplied query, those files will be stored in the ```pages_json_dir```, ```img_json_dir```, and ```img_dir``` as specified in [Configuration](#Configuration).
 
 <a name="Limitations"/>
-## Limitations
+##Limitations
 The NASA Images API will only allow a maximum of 100 pages of search results to be returned per request. At 100 images per request page, this means that a maximum of 10,000 images can be returned per search. Since some search terms include collections larger than this limit, additional searches must be used to return all images in said collection.
 
 <a name="Contributing"/>
-## Contributing
+##Contributing
 Any contributes are greatly appreciated. To contribute to the project, please do the following:
 
 1. Fork the project
@@ -61,7 +60,7 @@ Any contributes are greatly appreciated. To contribute to the project, please do
 5. Open a pull request
 
 <a name="ToDo"/>
-## ToDo
+##ToDo
 - Implement logging
 - Implement SQL integration to store image metadata
 	- Make ```page_json_dir``` and ```img_json_dir``` temporary storage while the DB will be the permanent storage
@@ -73,5 +72,5 @@ Any contributes are greatly appreciated. To contribute to the project, please do
 - Code refactoring, optimization, etc
 
 <a name-"License"/>
-## License
+##License
 This project uses the  GNU General Public License v3.
