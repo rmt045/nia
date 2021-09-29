@@ -1,7 +1,7 @@
 # nia
 
 ## Overview
-NIA, or NASA Image Archiver, is an application written to assist in archiving images accessible via the NASA Images API. This project implements the REST API specified by the agency in [their documentation](https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf").
+nia, or NASA Image Archiver, is an application written to assist in archiving images accessible via the NASA Images API. This project implements the REST API specified by the agency in [their documentation](https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf").
 
 ##### Table of Contents
 - [Prerequisites](#Prerequisites)
@@ -24,7 +24,7 @@ NIA, or NASA Image Archiver, is an application written to assist in archiving im
 3. Make the ```nia``` Bash script executable via ```chmod +x nia```
 
 ## Configuration
-NIA uses a JSON configuration file to determine where to save images, where to store log files, where to store discovered search terms, etc. The format for this configuration file can be found in the included example ```nia_config.json``` file in this repository; simply replace the dummy values with directories and filepaths appropriate to your needs. Below is an explanation of what each configuration item does:
+nia uses a JSON configuration file to determine where to save images, where to store log files, where to store discovered search terms, etc. The format for this configuration file can be found in the included example ```nia_config.json``` file in this repository; simply replace the dummy values with directories and filepaths appropriate to your needs. Below is an explanation of what each configuration item does:
 
 - ```base_url```: The URL used to access the NASA Images API and search for images that match the supplied query. For example, if the query is "q=moon", the search URL sent will be ```http://images-api.nasa.gov/search?media_type=image&q=moon```.
 - ```page_json_dir```: The directory where search result from the above URL Will be stored. Using the same query example, this directory will store ```json_q=moon_(1-100)```.
@@ -59,7 +59,7 @@ Any contributes are greatly appreciated. To contribute to the project, please do
 - Implement methods to sort images into subdirectories based on image metadata
 - Implement a method to search albums
 - Implement unit testing
-- Rewrite run script in Python to make NIA a Python-only application
+- Rewrite run script in Python to make nia a Python-only application
 - Code refactoring, optimization, etc
 
 ## License
