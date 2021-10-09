@@ -63,4 +63,3 @@ Any contributes are greatly appreciated. To contribute to the project, please do
 
 ## License
 This project uses the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html).
-
